@@ -1,32 +1,32 @@
 Cls
 Mode 3
 Sprite Load "ball.spr"
-x = 5
+x = 10
 y = 100
 d = 1
 g = 1
 cycles = 0
 speed = 10000
 incomingy = 99
-incomingx = 4
+incomingx = 9
 Sprite ON 1, x, y
-Line (0, 0) - (0, 480), 6
-Line (0, 0) - (461, 0), 6
+Line (6, 0) - (6, 480), 6
+Line (6, 0) - (461, 0), 6
 Line (461, 0) - (461, 480), 6
-Line (0, 380) - (461, 380), 6
+Line (6, 380) - (461, 380), 6
 Do
 If cycles = 4 Then
-Line (1, 100) - (15, 100), 0
+Line (7, 100) - (20, 100), 0
 EndIf
 Pause 10000 - speed
 If x < 444 Then
-  If x < 2 Then
+  If x < 8 Then
      d = d*(-1)
   EndIf
 Else
   d = d*(-1)
 EndIf
-If y < 5 Then
+If y < 2 Then
   g = g*(-1)
   x = x + d
   y = y + g
@@ -60,11 +60,11 @@ ElseIf userinput$ = "p" Then
   EndIf
  Loop
 EndIf
-Locate 15, 390
+Locate 18, 390
 Print "X"
-Locate 1, 408
+Locate 8, 408
 Print "    "
-Locate 1, 408
+Locate 8, 408
 Print x
 Locate 51, 390
 Print "Y"
